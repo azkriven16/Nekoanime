@@ -25,9 +25,8 @@ export default function EpisodeList() {
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-1">
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">
           {anime?.title?.english || anime?.title?.romaji} Episodes
@@ -62,26 +61,30 @@ export default function EpisodeList() {
           </ul>
         </div>
       </div>
-
-      <div className="join grid grid-cols-12">
-        {Array.from({
-          length: Math.ceil(anime.episodes.length / episodesPerPage),
-        }).map((_, index) => (
-          <button
-            key={index}
-            className="page-item"
-            onClick={() => paginate(index + 1)}
-          >
-            <a
-              className={`join-item btn-sm w-3 ${
-                currentPage === index + 1 && "btn-active"
-              }`}
-            >
-              {index + 1}
-            </a>
-          </button>
-        ))}
-      </div>
+      {anime?.episodes?.length > currentEpisodes.length && (
+        <div>
+          <h3 className="mb-4">Page</h3>
+          <div className="grid grid-cols-6 sm:grid-cols-12 md:grid-cols-24 gap-4">
+            {Array.from({
+              length: Math.ceil(anime.episodes.length / episodesPerPage),
+            }).map((_, index) => (
+              <button
+                key={index}
+                className="page-item"
+                onClick={() => paginate(index + 1)}
+              >
+                <a
+                  className={`join-item btn-md w-3 ${
+                    currentPage === index + 1 && "btn-active"
+                  }`}
+                >
+                  {index + 1}
+                </a>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="divider bg-anime h-0.5"></div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

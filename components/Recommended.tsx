@@ -20,7 +20,7 @@ export default function Recommended() {
               ?.map((ep: Anime) => {
                 return <AnimeCard anime={ep} />;
               })
-          : anime?.recommendations?.map((ep: Anime) => {
+          : anime?.recommendations?.slice(0, 6)?.map((ep: Anime) => {
               return <AnimeCard anime={ep} />;
             })}
       </div>

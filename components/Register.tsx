@@ -26,7 +26,7 @@ export default function Register() {
     const user = await response.json();
     console.log(user);
   };
-
+  console.log(errors);
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

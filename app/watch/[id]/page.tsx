@@ -26,7 +26,7 @@ export default async function InfoPageDynamic({
 }) {
   const anime: Anime = await getData({ params });
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-5">
       <div className="bg-base-200">
         <div className="container max-w-3xl mx-auto flex flex-col px-6">
           <VideoPlayer anime={anime} />
@@ -34,7 +34,7 @@ export default async function InfoPageDynamic({
       </div>
       <div className="container max-w-5xl mx-auto flex flex-col px-6 gap-10">
         <WatchSection />
-        <div className="collapse collapse-plus bg-base-200">
+        <div className="collapse collapse-plus bg-base-200 ">
           <input type="checkbox" />
           <div className="collapse-title text-lg font-medium text-anime">
             Show All Episodes

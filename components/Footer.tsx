@@ -7,9 +7,9 @@ export default function Footer() {
       <div>
         <img src={Logo.src} className="h-20 w-20" />
         <p>
-          Nekonime - Watch Anime Free
+          Nekoanime - Watch Anime Free
           <br />
-          Providing reliable tech since 2023
+          Made with ❤️ by Eugerdev 2023
         </p>
       </div>
       <div>

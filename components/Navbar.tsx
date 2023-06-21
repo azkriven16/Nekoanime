@@ -71,7 +71,7 @@ export default function Navbar() {
         <Link href="/" className="btn btn-ghost normal-case text-xl">
           <div className="flex gap-1 items-center">
             <img src={Logo.src} className="h-10 w-10" />
-            Nekonime
+            Nekoanime
           </div>
         </Link>
         <ul className="menu menu-horizontal tracking-wide hidden sm:flex flex-nowrap font-semibold">

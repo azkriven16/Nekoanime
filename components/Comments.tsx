@@ -21,7 +21,9 @@ export default function Comments() {
           </div>
         </div>
         <div className="chat-bubble">
-          This feature is still under development
+          Muteki no egao de arasu media Shiritai sono himitsu misuteriasu
+          Nuketeru toko sae kanojo no eria Kanpeki de usotsuki na kimi wa Tensai
+          teki na aidoru sama
         </div>
       </div>
       <div className="chat chat-start">

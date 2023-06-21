@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function EpisodeCard({ ep }: { ep: Episode }) {
-  const airDate = new Date(ep.airDate).toLocaleDateString();
+  const airDate = new Date(ep.airDate).toLocaleDateString() || "";
   return (
     <Link
       href={`/watch/${ep.id}`}
@@ -31,7 +31,7 @@ export default function EpisodeCard({ ep }: { ep: Episode }) {
                   clipRule="evenodd"
                 />
               </svg>
-              {convertDateToWords(airDate)}
+              <p className="text-xs">{convertDateToWords(airDate)}</p>
             </p>
             <p className="line-clamp-3 md:text-xs">
               {readableDescription(ep?.description)}
