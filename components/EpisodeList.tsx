@@ -61,7 +61,7 @@ export default function EpisodeList() {
           </ul>
         </div>
       </div>
-      {anime?.episodes?.length > currentEpisodes.length && (
+      {anime?.episodes?.length > currentEpisodes?.length && (
         <div>
           <h3 className="mb-4">Page</h3>
           <div className="grid grid-cols-6 sm:grid-cols-12 md:grid-cols-24 gap-4">
